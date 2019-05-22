@@ -1,6 +1,7 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.sql.*;
 
 interface IDatabaseManager {
@@ -17,6 +18,8 @@ interface IDatabaseManager {
     public void updateMean(int id, String word, String mean);
 
     public Word getWord(int id, String word);
+
+    public String[] getDictionaries();
 }
 
 public class DatabaseManager implements IDatabaseManager {
@@ -128,6 +131,22 @@ public class DatabaseManager implements IDatabaseManager {
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
+    }
+
+    @Override
+    public String[] getDictionaries() {
+        String sql = "SELECT name FROM Dictionary";
+        ArrayList<String> result = new ArrayList<String>();
+        try (Connection conn = this.connect();
+                PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            ResultSet resultSet = pstmt.executeQuery();
+            while(resultSet.next()) {
+                result.add(resultSet.getString("name"));
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return result.toArray(new String[result.size()]);
     }
 
 }
