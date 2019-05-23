@@ -135,7 +135,7 @@
 											"top": 334,
 											"width": 163.43310546875,
 											"height": 13,
-											"text": "+data: WordToMeaning[1..*]",
+											"text": "+data: Word[1..*]",
 											"horizontalAlignment": 0
 										}
 									],
@@ -217,7 +217,7 @@
 							"left": 112,
 							"top": 304,
 							"width": 173.43310546875,
-							"height": 113,
+							"height": 116,
 							"nameCompartment": {
 								"$ref": "AAAAAAFq3ZSI/VrZ8no="
 							},
@@ -277,7 +277,7 @@
 											"top": 527,
 											"width": 140.06103515625,
 											"height": 13,
-											"text": "WordToMeaning"
+											"text": "Word"
 										},
 										{
 											"_type": "LabelView",
@@ -366,7 +366,7 @@
 											"top": 565,
 											"width": 140.06103515625,
 											"height": 13,
-											"text": "+meaning",
+											"text": "+mean",
 											"horizontalAlignment": 0
 										}
 									],
@@ -400,7 +400,7 @@
 											"top": 588,
 											"width": 140.06103515625,
 											"height": 13,
-											"text": "+changeWord()",
+											"text": "+setWord()",
 											"horizontalAlignment": 0
 										},
 										{
@@ -417,7 +417,7 @@
 											"top": 603,
 											"width": 140.06103515625,
 											"height": 13,
-											"text": "+changeDescription()",
+											"text": "+setMean()",
 											"horizontalAlignment": 0
 										}
 									],
@@ -685,13 +685,64 @@
 											"height": 13,
 											"text": "+getWord()",
 											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAFq4F2DBTc57Wo=",
+											"_parent": {
+												"$ref": "AAAAAAFq3Z5bO1ug7bg="
+											},
+											"model": {
+												"$ref": "AAAAAAFq4F2C6jc2ITI="
+											},
+											"font": "Arial;13;0",
+											"left": 245,
+											"top": 200,
+											"width": 159,
+											"height": 13,
+											"text": "+getDictionary()",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAFq4GnwDziLWC4=",
+											"_parent": {
+												"$ref": "AAAAAAFq3Z5bO1ug7bg="
+											},
+											"model": {
+												"$ref": "AAAAAAFq4Gnv/jiIt8E="
+											},
+											"font": "Arial;13;0",
+											"left": 245,
+											"top": 215,
+											"width": 159,
+											"height": 13,
+											"text": "+insertDIctionary()",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAFq4GpHTDi2SKY=",
+											"_parent": {
+												"$ref": "AAAAAAFq3Z5bO1ug7bg="
+											},
+											"model": {
+												"$ref": "AAAAAAFq4GpHPTizDx8="
+											},
+											"font": "Arial;13;0",
+											"left": 245,
+											"top": 230,
+											"width": 159,
+											"height": 13,
+											"text": "+deleteDIctionary()",
+											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 240,
 									"top": 120,
 									"width": 169,
-									"height": 83
+									"height": 128
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -731,7 +782,7 @@
 							"left": 240,
 							"top": 72,
 							"width": 169,
-							"height": 132,
+							"height": 177,
 							"stereotypeDisplay": "icon",
 							"nameCompartment": {
 								"$ref": "AAAAAAFq3Z5bO1uaJSc="
@@ -789,7 +840,7 @@
 											"font": "Arial;13;1",
 											"left": 365,
 											"top": 479,
-											"width": 101.12451171875,
+											"width": 144.904296875,
 											"height": 13,
 											"text": "DictionaryModel"
 										},
@@ -820,7 +871,7 @@
 									"font": "Arial;13;0",
 									"left": 360,
 									"top": 472,
-									"width": 111.12451171875,
+									"width": 154.904296875,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAFq3b2GPF09l0A="
@@ -857,17 +908,34 @@
 											"font": "Arial;13;0",
 											"left": 365,
 											"top": 502,
-											"width": 101.12451171875,
+											"width": 144.904296875,
 											"height": 13,
 											"text": "+description",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAFq3+f74OnIkfA=",
+											"_parent": {
+												"$ref": "AAAAAAFq3b2GPF1BGm4="
+											},
+											"model": {
+												"$ref": "AAAAAAFq3+f7wenFvk0="
+											},
+											"font": "Arial;13;0",
+											"left": 365,
+											"top": 517,
+											"width": 144.904296875,
+											"height": 13,
+											"text": "+dictionaryID {id, unique}",
 											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 360,
 									"top": 497,
-									"width": 111.12451171875,
-									"height": 23
+									"width": 154.904296875,
+									"height": 38
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -880,8 +948,8 @@
 									},
 									"font": "Arial;13;0",
 									"left": 360,
-									"top": 520,
-									"width": 111.12451171875,
+									"top": 535,
+									"width": 154.904296875,
 									"height": 10
 								},
 								{
@@ -917,8 +985,8 @@
 							"containerChangeable": true,
 							"left": 360,
 							"top": 472,
-							"width": 111.12451171875,
-							"height": 58,
+							"width": 154.904296875,
+							"height": 73,
 							"nameCompartment": {
 								"$ref": "AAAAAAFq3b2GPF08kYA="
 							},
@@ -956,8 +1024,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 271,
-									"top": 254,
+									"left": 263,
+									"top": 277,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -977,8 +1045,8 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 284,
-									"top": 261,
+									"left": 276,
+									"top": 285,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -998,8 +1066,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 244,
-									"top": 239,
+									"left": 238,
+									"top": 262,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -1017,7 +1085,7 @@
 								"$ref": "AAAAAAFq3Z5bO1uZOms="
 							},
 							"lineStyle": 1,
-							"points": "286:204;230:303",
+							"points": "268:249;234:303",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFq3cCvk17yBQg="
@@ -1049,7 +1117,7 @@
 										"$ref": "AAAAAAFq3cx8w18AR70="
 									},
 									"font": "Arial;13;0",
-									"left": 311,
+									"left": 313,
 									"top": 424,
 									"width": 48.7880859375,
 									"height": 13,
@@ -1072,7 +1140,7 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 343,
+									"left": 345,
 									"top": 411,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -1093,7 +1161,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 318,
+									"left": 322,
 									"top": 449,
 									"height": 13,
 									"alpha": -1.5707963267948966,
@@ -1115,7 +1183,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 314,
-									"top": 411,
+									"top": 409,
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 30,
@@ -1135,8 +1203,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 324,
-									"top": 401,
+									"left": 323,
+									"top": 399,
 									"height": 13,
 									"alpha": 0.7853981633974483,
 									"distance": 40,
@@ -1157,7 +1225,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 296,
-									"top": 432,
+									"top": 430,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 25,
@@ -1177,7 +1245,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 356,
+									"left": 361,
 									"top": 438,
 									"height": 13,
 									"alpha": -0.5235987755982988,
@@ -1197,8 +1265,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 361,
-									"top": 425,
+									"left": 366,
+									"top": 426,
 									"height": 13,
 									"alpha": -0.7853981633974483,
 									"distance": 40,
@@ -1217,8 +1285,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 345,
-									"top": 463,
+									"left": 351,
+									"top": 464,
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 25,
@@ -1263,7 +1331,7 @@
 								"$ref": "AAAAAAFq3ZSI/FrYuwA="
 							},
 							"lineStyle": 1,
-							"points": "285:416;370:471",
+							"points": "285:415;376:471",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFq3cx8xF8FFTU="
@@ -1371,7 +1439,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "WordToMeaning",
+					"name": "Word",
 					"attributes": [
 						{
 							"_type": "UMLAttribute",
@@ -1388,7 +1456,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFq3ZYurVsH7gg="
 							},
-							"name": "meaning",
+							"name": "mean",
 							"type": ""
 						}
 					],
@@ -1399,7 +1467,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFq3ZYurVsH7gg="
 							},
-							"name": "changeWord"
+							"name": "setWord"
 						},
 						{
 							"_type": "UMLOperation",
@@ -1407,7 +1475,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFq3ZYurVsH7gg="
 							},
-							"name": "changeDescription"
+							"name": "setMean"
 						}
 					]
 				},
@@ -1502,6 +1570,30 @@
 								"$ref": "AAAAAAFq3Z5bOluXTjI="
 							},
 							"name": "getWord"
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAFq4F2C6jc2ITI=",
+							"_parent": {
+								"$ref": "AAAAAAFq3Z5bOluXTjI="
+							},
+							"name": "getDictionary"
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAFq4Gnv/jiIt8E=",
+							"_parent": {
+								"$ref": "AAAAAAFq3Z5bOluXTjI="
+							},
+							"name": "insertDIctionary"
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAFq4GpHPTizDx8=",
+							"_parent": {
+								"$ref": "AAAAAAFq3Z5bOluXTjI="
+							},
+							"name": "deleteDIctionary"
 						}
 					]
 				},
@@ -1521,6 +1613,17 @@
 							},
 							"name": "description",
 							"type": ""
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAFq3+f7wenFvk0=",
+							"_parent": {
+								"$ref": "AAAAAAFq3b2GO105AGU="
+							},
+							"name": "dictionaryID",
+							"type": "",
+							"isUnique": true,
+							"isID": true
 						}
 					]
 				},
@@ -1732,7 +1835,7 @@
 											"top": 569,
 											"width": 231,
 											"height": 13,
-											"text": "+controller: DIctionaryController",
+											"text": "+controller: DictionaryController",
 											"horizontalAlignment": 0
 										}
 									],
@@ -5061,7 +5164,7 @@
 											"top": 287,
 											"width": 215,
 											"height": 13,
-											"text": "DIctionaryController"
+											"text": "DictionaryController"
 										},
 										{
 											"_type": "LabelView",
@@ -5283,7 +5386,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "DIctionaryController",
+					"name": "DictionaryController",
 					"attributes": [
 						{
 							"_type": "UMLAttribute",
